@@ -30,7 +30,7 @@ export default function CharacterList() {
       species={character.species}
       status={character.status}
       location={character.location.name}
-      origin= {character.origin.name} />
+      origin={character.origin.name} episodes={character.episode.length} />
     }))}
 
   </section>

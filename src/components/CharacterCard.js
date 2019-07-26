@@ -2,7 +2,7 @@ import React from 'react'
 import { Icon } from 'semantic-ui-react';
 
 export default function CharacterCard (props) {
-  const { img, name, species, status, location, origin } = props;
+  const { img, name, species, status, location, origin, episodes} = props;
 
   return (
     <div>
@@ -12,7 +12,7 @@ export default function CharacterCard (props) {
       <span>{status}</span>
       <p>Location: {location}</p>
       <p>Origin: {origin}</p>
-      <p><Icon name='user' />Episodes</p>
+      <p><Icon name='user' />Episodes: {episodes}</p>
     </div>
   )
 }
