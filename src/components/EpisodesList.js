@@ -18,7 +18,7 @@ export default function EpisodesList() {
     .catch((err) => {
       console.log('Episode Data Not Available')
     })
-  }, [])
+  }, [episodes])
 
   return (
   

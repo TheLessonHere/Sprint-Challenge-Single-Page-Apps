@@ -5,8 +5,8 @@ import CharacterCard from './CharacterCard';
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
-  const [characters, setCharacters] = useState([{"id":1,"name":"Rick Sanchez","status":"Alive","species":"Human","type":"","gender":"Male","origin":{"name":"Earth (C-137)","url":"https://rickandmortyapi.com/api/location/1"},"location":{"name":"Earth (Replacement Dimension)","url":"https://rickandmortyapi.com/api/location/20"},"image":"https://rickandmortyapi.com/api/character/avatar/1.jpeg"},
-{"id":2,"name":"Morty Smith","status":"Alive","species":"Human","type":"","gender":"Male","origin":{"name":"Earth (C-137)","url":"https://rickandmortyapi.com/api/location/1"},"location":{"name":"Earth (Replacement Dimension)","url":"https://rickandmortyapi.com/api/location/20"},"image":"https://rickandmortyapi.com/api/character/avatar/2.jpeg"}])
+  const [characters, setCharacters] = useState([{"id":1,"name":"Rick Sanchez","status":"Alive","species":"Human","type":"","gender":"Male","origin":{"name":"Earth (C-137)","url":"https://rickandmortyapi.com/api/location/1"},"location":{"name":"Earth (Replacement Dimension)","url":"https://rickandmortyapi.com/api/location/20"},"image":"https://rickandmortyapi.com/api/character/avatar/1.jpeg", "episode":["https://rickandmortyapi.com/api/episode/1"]},
+{"id":2,"name":"Morty Smith","status":"Alive","species":"Human","type":"","gender":"Male","origin":{"name":"Earth (C-137)","url":"https://rickandmortyapi.com/api/location/1"},"location":{"name":"Earth (Replacement Dimension)","url":"https://rickandmortyapi.com/api/location/20"},"image":"https://rickandmortyapi.com/api/character/avatar/2.jpeg", "episode":["https://rickandmortyapi.com/api/episode/1"]}])
 
   useEffect(() => {
     // TODO: Add AJAX/API Request here - must run in `useEffect`
@@ -18,7 +18,7 @@ export default function CharacterList() {
     .catch((err) => {
       console.log('Character Data Not Available')
     })
-  }, [])
+  }, [characters])
 
   return (
   
@@ -30,7 +30,8 @@ export default function CharacterList() {
       species={character.species}
       status={character.status}
       location={character.location.name}
-      origin={character.origin.name} episodes={character.episode.length} />
+      origin={character.origin.name} 
+      episodes={character.episode.length} />
     }))}
 
   </section>

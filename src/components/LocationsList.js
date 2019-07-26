@@ -18,7 +18,7 @@ export default function LocationsList() {
     .catch((err) => {
       console.log('Location Data Not Available')
     })
-  }, [])
+  }, [locations])
 
   return (
   

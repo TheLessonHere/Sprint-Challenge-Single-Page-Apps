@@ -1,13 +1,25 @@
 import React from 'react'
+import styled from "styled-components";
+import { Icon } from 'semantic-ui-react';
+
+const StyledCard = styled.div`
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    width: 400px;
+`;
 
 export default function LocationCard (props) {
   const { name, type, dimension, residents } = props;
   
   return (
-    <div>
+    <StyledCard>
     <h2>{name}</h2>
     <p>{type} - {dimension}</p>
-    <div>Residents: {residents}</div>
-    </div>
+    <div><Icon name='users' />Residents: {residents}</div>
+    </StyledCard>
   )
 }
