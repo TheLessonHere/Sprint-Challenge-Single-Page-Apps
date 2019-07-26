@@ -10,6 +10,9 @@ const StyledCard = styled.div`
     border: 1px solid lightgrey;
     border-radius: 10px;
     width: 400px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 `;
 
 export default function LocationCard (props) {
