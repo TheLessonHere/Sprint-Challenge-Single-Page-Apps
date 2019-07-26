@@ -15,14 +15,15 @@ const StyledCard = styled.div`
     padding-bottom: 10px;
 `;
 
-export default function LocationCard (props) {
-  const { name, type, dimension, residents } = props;
+export default function EpisodeCard (props) {
+  const { name, date, seasontag, characters } = props;
   
   return (
     <StyledCard>
     <h2>{name}</h2>
-    <p>{type} - {dimension}</p>
-    <div><Icon name='users' />Residents: {residents}</div>
+    <p>{date}</p>
+    <p>{seasontag}</p>
+    <div><Icon name='user' />Characters: {characters}</div>
     </StyledCard>
   )
 }
